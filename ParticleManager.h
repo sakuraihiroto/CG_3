@@ -51,7 +51,7 @@ public: // サブクラス
 		//加速度
 		XMFLOAT3 accel = {};
 		//現在フレーム
-		int frame = 0;
+		int frame = 5;
 		//終了フレーム
 		int num_frame = 0;
 		//スケール

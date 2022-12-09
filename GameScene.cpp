@@ -36,7 +36,13 @@ void GameScene::Initialize(DirectXCommon* dxCommon, Input* input)
 	particleMan = ParticleManager::Create();
 	particleMan->Update();
 
-	for (int i = 0; i < 100; i++)
+	
+	
+}
+
+void GameScene::Update()
+{
+	for (int i = 0; i < 10; i++)
 	{
 		//xyz全て[-5.0f,+5.0f]でランダムに分布
 		const float rnd_pos = 10.0f;
@@ -60,11 +66,7 @@ void GameScene::Initialize(DirectXCommon* dxCommon, Input* input)
 		//追加
 		particleMan->Add(60, pos, vel, acc, 1.0f, 0.0f);
 	}
-	
-}
 
-void GameScene::Update()
-{
 	// カメラ移動
 	if (input->PushKey(DIK_W) || input->PushKey(DIK_S) || input->PushKey(DIK_D) || input->PushKey(DIK_A))
 	{
